@@ -1,6 +1,4 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2758
-\cocoatextscaling0\cocoaplatform0{\fonttbl}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-}
+Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile "$env:TEMP\ngrok.zip"
+Expand-Archive "$env:TEMP\ngrok.zip" -DestinationPath "$env:TEMP\ngrok"
+& "$env:TEMP\ngrok\ngrok.exe" authtoken TUO_TOKEN
+& "$env:TEMP\ngrok\ngrok.exe" tcp 22
